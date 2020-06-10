@@ -1,14 +1,10 @@
 body,
-html,
-table {
+html{
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   min-width: 780px;
-}
-table{
-    border-spacing:0;
 }
 /*头部*/
 .header {
@@ -18,6 +14,7 @@ table{
   width: 100%;
   text-align: center;
   height: 200px;
+  display:Inline-block;
 }
 .header img {
   width: 70px;
@@ -28,13 +25,15 @@ table{
   font-size: 38px;
   font-family: "黑体";
   font-weight: bold;
+  display:Inline-block;
+  margin-top:80px;
 }
 /*左侧列表*/
 .list-link {
   margin-top: 0;
   width: 200px;
   float: left;
-  height: 70%;
+  height: 650px;
   padding: 0;
   background-color: white;
 }
@@ -53,7 +52,7 @@ table{
   }
 /*右侧内容*/
 .introduce{
-    padding: 0;
+    padding: 5px 10px;
 }
 .introduce p {
   font-size: 0px;
@@ -61,8 +60,8 @@ table{
   font-weight: bolder;
 }
 .introduce img {
-  width: 50%;
-  padding: 5px 10px;
+  height:500px;
+  width: 500px;
 }
 /*底部*/
 .copyright {
