@@ -1,0 +1,133 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 1173px;
+}
+/*头部*/
+.header {
+  background-color: rgb(119, 49, 50);
+  width: 100%;
+  height: 60px;
+}
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  padding:15px 100px;
+}
+
+.header .header-box .header-box-left{
+  width: 80%;
+}
+
+.header .header-box .header-box-right{
+  width: 20%;
+}
+
+.header .header-box .header-box-left span{
+  color: white;
+}
+
+.header .header-box .header-box-right a{
+  color: white;
+  margin-left: 5px;
+  text-decoration: none;
+}
+/*中间内容*/
+.content{
+  width: 80%;
+  padding-left: 10%;
+}
+.content p{
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;
+}
+.content-expression{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+
+}
+.content-expression-det{
+  background-color: rgb(248, 132, 132);
+  width: 290px;
+  display: flex;
+  margin: 0 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: -20px;
+}
+
+.content-expression-det img{
+  width: 290px;
+  height: 300px;
+}
+
+.content-fas{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.content-fas-det{
+  background-color: rgb(248, 132, 132);
+  width: 300px;
+  display: flex;
+  margin: 0 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-fas-det img{
+  width: 300px;
+  height: 200px;
+}
+
+/*底部*/
+.button {
+  background-color: #aa3138;
+  width: 100%;
+  height: 220px;
+  text-align: center;
+}
+.button .button-text {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.button .button-text .button-text-left{
+  width: 80%;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 70px;
+}
+.button .button-text .button-text-left span{
+  text-align: left;
+  width: 600px;
+}
+.button .button-text .button-text-right{
+  width: 20%;
+  margin-top: 30px;
+}
+/*底部2*/
+.copyright {
+  background-color: #1324b9;
+  width: 100%;
+  height: 25px;
+  text-align: center;
+}
+.copyright span {
+  color: white;
+  font-family: "宋体";
+  font-weight: bold;
+}
