@@ -174,7 +174,7 @@ html {
 }
 
 .button .button-text .button-text-left{
-  width: 80%;
+  width: 79%;
   color: white;
   font-size: 18px;
   font-weight: bold;
@@ -189,6 +189,7 @@ html {
   width: 600px;
 }
 .button .button-text .button-text-right{
+  width: 21%;
   margin-top: 30px;
 }
 /*底部2*/
