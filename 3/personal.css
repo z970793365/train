@@ -256,6 +256,7 @@ html {
   }
   
 }
+
 @media screen and (max-width: 738px) {
   .header-box {
     display: flex;
