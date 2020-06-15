@@ -18,7 +18,7 @@ html {
 .header-box {
   padding: 15px 0px;
   vertical-align: middle;
-  width:1400px;
+  width:1200px;
   margin: 0 auto;
 }
 
@@ -96,7 +96,7 @@ html {
 }
 /*中间内容*/
 .content{
-  width: 1400px;
+  width: 1200px;
   margin: 0 auto;
 }
 .content p{
@@ -114,7 +114,7 @@ html {
   background-color: #df4358c0;
 }
 .content-expression{
-  width: 1400px;
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -136,7 +136,7 @@ html {
 }
 
 .content-fas{
-  width: 1400px;
+  width: 1200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
