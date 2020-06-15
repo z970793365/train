@@ -2,8 +2,13 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
-  min-width: 1173px;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  min-width: 380px;
+}
+html {
+  overflow: auto;
 }
 /*头部*/
 .header {
@@ -36,30 +41,38 @@ html {
 }
 /*中间内容*/
 .content{
-  width: 80%;
-  padding-left: 10%;
+  width: 1400px;
+  margin: 0 auto;
 }
 .content p{
   text-align: center;
   font-size: 23px;
   font-weight: bold;
 }
+.content-title::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 40px);
+  height: 5px;
+  width: 80px;
+  background-color: #df4358c0;
+}
 .content-expression{
-  width: 100%;
+  width: 1400px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 30px;
+  margin: 0 auto;
 
 }
 .content-expression-det{
   background-color: rgb(248, 132, 132);
-  width: 290px;
   display: flex;
-  margin: 0 10px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: -20px;
 }
 
 .content-expression-det img{
@@ -68,40 +81,41 @@ html {
 }
 
 .content-fas{
-  width: 100%;
+  width: 1400px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 20px;
   padding-top: 30px;
+  margin: 0 auto;
 }
 
 .content-fas-det{
   background-color: rgb(248, 132, 132);
-  width: 300px;
   display: flex;
-  margin: 0 10px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
 .content-fas-det img{
-  width: 300px;
-  height: 200px;
+  width: 290px;
+  height: 300px;
 }
 
 /*底部*/
 .button {
   background-color: #aa3138;
   width: 100%;
-  height: 220px;
   text-align: center;
 }
 .button .button-text {
-  width: 80%;
+  width: 1400px;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: row;
+  margin: 0 auto;
 }
 
 .button .button-text .button-text-left{
@@ -113,7 +127,7 @@ html {
 }
 .button .button-text .button-text-left span{
   text-align: left;
-  width: 600px;
+  width: 400px;
 }
 .button .button-text .button-text-right{
   width: 20%;
@@ -130,4 +144,184 @@ html {
   color: white;
   font-family: "宋体";
   font-weight: bold;
+}
+
+
+/*自适应媒体调整*/
+
+
+@media screen and (max-width: 1420px) {
+  .content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .content-expression-det img {
+    width: 260px;
+    height: 420px;
+  }
+  .content-fas-det img {
+    width: 260px;
+    height: 420px;
+  }
+  .button .button-text {
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .header-box{
+    width: 1000px;
+  }
+  .content {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .content-expression{
+    width: 100%;
+  }
+  .content-expression-det img {
+    width: 200px;
+    height: 320px;
+  }
+  .content-fas{
+    width: 100%;
+  }
+  .content-fas-det img {
+    width: 200px;
+    height: 320px;
+  }
+  .button .button-text {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-box{
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .content-expression-det img {
+    width: 200px;
+    height: 320px;
+  }
+  .content-fas-det img {
+    width: 200px;
+    height: 320px;
+  }
+  .button .button-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header-box{
+    width: 700px;
+  }
+  .content {
+    width: 700px;
+    margin: 0 auto;
+  }
+  
+  .content-expression-det img {
+    width: 300px;
+    height: 420px;
+  }
+  .content-fas-det img {
+    width: 300px;
+    height: 420px;
+  }
+  .button .button-text {
+    width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  
+}
+@media screen and (max-width: 738px) {
+  .header-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header .header-box .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+  }
+  .header .header-box .header-box-right {
+    display: none;
+  }
+  .header .header-box .header-box-left {
+    text-align: center;
+    padding-left: 12px;
+  }
+  .content-expression-det{
+    margin: 0 auto;
+  }
+  .content-fas-det{
+    margin: 0 auto;
+  }
+  .button .button-text .button-text-left {
+    text-align: left;
+    padding-right: 4px;
+    padding-left: 10px;
+    margin-left: 0;
+  }
+  .button .button-text .button-text-left .button-text-left-text {
+    width: 100%;
+    text-align: left;
+  }
+  .header .header-box .icon-mobile {
+    float: right;
+    padding-top: 5px;
+    visibility: visible;
+    position: relative;
+  }
+  .content {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .content-expression{
+    width: 100%;
+  }
+  .content-fas{
+    width: 100%;
+  }
+  .button .button-text {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+  
+  .button .button-text .button-text-right{
+    margin: 30px auto;
+    width: 100%;
+    padding-right: 0;
+  }
 }
