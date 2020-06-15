@@ -16,17 +16,20 @@ html {
   height: 60px;
 }
 .header-box {
-  display: flex;
-  justify-content: space-between;
-  padding:15px 100px;
+  padding: 15px 0px;
+  vertical-align: middle;
+  width:1400px;
+  margin: 0 auto;
 }
 
 .header .header-box .header-box-left{
-  width: 80%;
+  float: left;
+  vertical-align: middle;
 }
 
 .header .header-box .header-box-right{
-  width: 20%;
+  float: right;
+  padding-top: 5px;
 }
 
 .header .header-box .header-box-left span{
@@ -37,6 +40,59 @@ html {
   color: white;
   margin-left: 5px;
   text-decoration: none;
+}
+.header .header-box .header-title {
+  color: skyblue;
+  font-size: 28px;
+  font-weight: bold;
+}
+.header .header-box .icon-mobile {
+  float: right;
+  visibility: hidden;
+}
+
+.header .header-box .icon-mobile {
+  float: right;
+  padding: 5px;
+  visibility: hidden;
+  position: relative;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header .header-box .dropdown {
+  position: relative;
+  display: none;
+  margin-right: 15px;
+}
+
+.header .header-box .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 70px;
+  z-index: 99;
+  top:30px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.header .header-box .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.header .header-box .dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header .header-box .icon-mobile:hover .dropdown-content {
+  display: block;
 }
 /*中间内容*/
 .content{
