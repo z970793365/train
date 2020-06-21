@@ -1,0 +1,48 @@
+.screen_container{
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 2px 2px 16px 2px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease-out;
+}
+.screen_container {
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+}
+div img{  
+    cursor: pointer;  
+    transition: all 0.25s; /* 所有的属性变化在0.5s的时间段内完成 */
+}  
+.screen_toolbar{
+    width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.send,.clear{
+    padding: 5px 20px;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid #e0e0e0;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+}
+/*底部*/
+.copyright {
+    background-color: #1324b9;
+    width: 100%;
+    height: 25px;
+    text-align: center;
+  }
+  .copyright span {
+    color: white;
+    font-family: "宋体";
+    font-weight: bold;
+  }
