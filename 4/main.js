@@ -47,7 +47,6 @@ function addInterval(jqueryDom) {
             jqueryDom.remove();
             clearInterval(timer);
         }
-    }, 
-    10);
+    }, 10);
     timers.push(timer);
 }
