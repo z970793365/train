@@ -33,7 +33,7 @@ html{
   margin-top: 0;
   width: 200px;
   float: left;
-  height: 680px;
+  height: 700px;
   padding: 0;
   background-color: white;
 }
@@ -54,10 +54,11 @@ html{
 .introduce{
     padding: 5px 10px;
 }
-.introduce p {
-  font-size: 0px;
-  font-family: "宋体";
-  font-weight: bolder;
+
+.introduce p:first-letter {
+  font-size: 2em;
+  font-weight: bold;
+  color:black;
 }
 .introduce img {
   height:500px;
