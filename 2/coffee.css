@@ -33,7 +33,7 @@ html{
   margin-top: 0;
   width: 200px;
   float: left;
-  height: 650px;
+  height: 680px;
   padding: 0;
   background-color: white;
 }
@@ -75,4 +75,6 @@ html{
   font-family: "宋体";
   font-weight: bold;
 }
-
+.price::before {
+	content: '￥';
+}
