@@ -42,7 +42,7 @@ function createScreenbullet(text) {
 // 为弹幕添加定时任务
 function addInterval(jqueryDom) {
     var i = 0;
-    var speed = Math.floor(Math.random() * 6) + 1;
+    var speed = Math.floor(Math.random() * 6) + 1; 
     var right = jqueryDom.offset().right - $(".screen_container").offset().right;
     var timer = setInterval(function () {
         right--;
