@@ -17,7 +17,7 @@
 }
 div img{  
     cursor: pointer;  
-    transition: all 0.25s; /* 所有的属性变化在0.5s的时间段内完成 */
+    transition: all 0.25s; /* 所有的属性变化在0.25s的时间段内完成 */
 }  
 .screen_toolbar{
     width: 600px;

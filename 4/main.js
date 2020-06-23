@@ -23,27 +23,31 @@ $(".clear").on("click", function () {
 function createScreenbullet(text) {
     var jqueryDom = $("<div class='bullet'>" + text + "</div>");
     var fontColor = "rgb(" + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random() * 256) + "," + Math.floor(Math.random()) + ")";
-    var fontSize = Math.floor((Math.random() + 1) * 24) + "px";
-    var left = $(".screen_container").width() + "px";
+    var fontSize = Math.floor((Math.random()* 20) + 15) + "px";
+    var right = $(".screen_container").width() + "px";
     var top = Math.floor(Math.random() * 400) + "px";
     top = parseInt(top) > 352 ? "352px" : top;
     jqueryDom.css({
         "position": 'absolute',
         "color": fontColor,
         "font-size": fontSize,
-        "left": left,
-        "top": top
+        "right": right,
+        "top": top,
+        "whiteSpace": 'nowrap',
+        "display": 'block',
     });
     $(".screen_container").append(jqueryDom);
     return jqueryDom;
 }
 // 为弹幕添加定时任务
 function addInterval(jqueryDom) {
-    var left = jqueryDom.offset().left - $(".screen_container").offset().left;
+    var i = 0;
+    var speed = Math.floor(Math.random() * 6) + 1;
+    var right = jqueryDom.offset().right - $(".screen_container").offset().right;
     var timer = setInterval(function () {
-        left--;
-        jqueryDom.css("left", left + "px");
-        if (jqueryDom.offset().left + jqueryDom.width() < $(".screen_container").offset().left) {
+        right--;
+        jqueryDom.css("right", (i += speed)+ "px");
+        if (jqueryDom.offset().right + jqueryDom.width() < $(".screen_container").offset().right) {
             jqueryDom.remove();
             clearInterval(timer);
         }
