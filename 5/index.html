@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon" />
+    <script src="./libs/scrollReveal/scrollreveal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="./libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>外设天下</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="logo">外设天下</div>
+        <nav>
+          <a href="./index.html">首页</a>
+          <a href="#service">服务流程</a>
+          <a href="#showcases">外设产品</a>
+          <a href="#team-intro">团队介绍</a>
+          <a href="./news.html">公司动态</a>
+          <i class="fas fa-search"></i>
+        </nav>
+        <div class="burger">
+          <div class="burger-line1"></div>
+          <div class="burger-line2"></div>
+          <div class="burger-line3"></div>
+        </div>
+      </header>
+      <div id="home" class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <div class="glide__slides">
+            <div class="glide__slide">
+              <div class="slide-caption">
+                <h1>外设天下外设专卖</h1>
+                <h3>
+                  玩游戏不带感?如果你的技术过硬，那一定是因为你的外设没选好。
+                </h3>
+                <button class="explore-btn">探索更多</button>
+              </div>
+              <div class="backdrop"></div>
+              <img src="./img/bj1.png" alt="bj" />
+            </div>
+            <div class="glide__slide">
+              <div class="slide-caption left">
+                <h1>左手的掌控</h1>
+                <h3>
+                  左手的灵动、合理的施放，掌控游戏的走向。
+                </h3>
+                <button class="explore-btn">探索更多</button>
+              </div>
+              <div class="backdrop"></div>
+              <img src="./img/jp1.jpg" alt="yangtuo"></img>
+            </div>
+            <div class="glide__slide">
+              <div class="slide-caption left">
+                <h1>右手的精准</h1>
+                <h3>
+                  精准的操作，令游戏与胜利更进一步。
+                </h3>
+                <button class="explore-btn">探索更多</button>
+              </div>
+              <div class="backdrop"></div>
+              <img src="./img/sb1.jpg" alt="dog"></img>
+            </div>
+          </div>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            >
+          </button>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+          <button class="glide__bullet" data-glide-dir="=0"></button>
+          <button class="glide__bullet" data-glide-dir="=1"></button>
+          <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <section id="service" class="service">
+          <h2 class="title1">服务流程</h2>
+          <p class="intro">
+            先通过网站进行购买，购买完成等待收货，有问题及时反映
+          </p>
+          <div class="services">
+            <div class="service-item">
+              <i class="fas fa-cart-arrow-down"></i>
+              <h2 class="service-title">直接购买</h2>
+              <p class="service-content">
+                客户需通过网站直接进行购买
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-shipping-fast"></i>
+              <h2 class="service-title">急速快递</h2>
+              <p class="service-content">
+                下单立刻打包发货，争取最快收货
+              </p>
+            </div>
+            <div class="service-item">
+              <i class="fas fa-headset"></i>
+              <h2 class="service-title">售后服务</h2>
+              <p class="service-content">
+                售后如若出现异常请及时联系客服进行解决
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="showcases" class="showcases section-bg">
+          <h2 class="title1">外设产品</h2>
+          <div class="filter-btns">
+            <button class="filter-btn active" data-filter="*">全部</button>
+            <button class="filter-btn" data-filter=".sb">鼠标</button>
+            <button class="filter-btn" data-filter=".jp">键盘</button>
+            <button class="filter-btn" data-filter=".ej   ">耳机</button>
+            <button class="filter-btn" data-filter=".shoub">手柄</button>
+            <button class="filter-btn" data-filter=".qt">其他</button>
+          </div>
+          <div class="cases">
+            <div class="case-item sb">
+              <img
+                src="./img/sb1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item sb">
+              <img
+                src="./img/sb2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item sb">
+              <img
+                src="./img/sb3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item jp">
+              <img
+                src="./img/jp1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item jp">
+              <img
+                src="./img/jp2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item jp">
+              <img
+                src="./img/jp3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item ej">
+              <img
+                src="./img/ej1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item ej">
+              <img
+                src="./img/ej2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item ej">
+              <img
+                src="./img/ej3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item shoub">
+              <img
+                src="./img/shoub1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item shoub">
+              <img
+                src="./img/shoub2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item shoub">
+              <img
+                src="./img/shoub3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item qt">
+              <img
+                src="./img/qt1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item qt">
+              <img
+                src="./img/qt2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item qt">
+              <img
+                src="./img/qt3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="case-item qt">
+              <img
+                src="./img/qt4.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <section class="data-section">
+          <div class="data-piece">
+            <i class="fas fa-award"></i>
+            <div class="num">36</div>
+            <div class="data-desc">个证书</div>
+          </div>
+          <div class="data-piece">
+            <i class="fas fa-user"></i>
+            <div class="num">233</div>
+            <div class="data-desc">名员工</div>
+          </div>
+          <div class="data-piece">
+            <i class="fas fa-gamepad"></i>
+            <div class="num">300+</div>
+            <div class="data-desc">款外设</div>
+          </div>
+          <div class="data-piece">
+            <i class="fas fa-cash-register"></i>
+            <div class="num">2000+</div>
+            <div class="data-desc">次下单</div>
+          </div>
+        </section>
+        <section id="team-intro" class="team-intro section-bg">
+          <h2 class="title1">团队介绍</h2>
+          <div class="team-members">
+            <div class="team-member">
+              <div class="profile-image">
+                <img src="./img/xx1.jpg" alt="" />
+              </div>
+              <h4 class="name">uzi</h4>
+              <p class="position">店长</p>
+              <ul class="social-links">
+                <li>
+                  <a href=""><i class="fab fa-weixin"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-weibo"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-qq"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="team-member">
+              <div class="profile-image">
+                <img
+                  src="./img/xx2.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="name">vn</h4>
+              <p class="position">副店长</p>
+              <ul class="social-links">
+                <li>
+                  <a href=""><i class="fab fa-weixin"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-weibo"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-qq"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="team-member">
+              <div class="profile-image">
+                <img
+                  src="./img/xx3.jpg"
+                  alt=""
+                />
+              </div>
+              <h4 class="name">kaisa</h4>
+              <p class="position">销售</p>
+              <ul class="social-links">
+                <li>
+                  <a href=""><i class="fab fa-weixin"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-weibo"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-qq"></i></a>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="team-member">
+              <div class="profile-image">
+                <img src="./img/xx4.jpg" alt="" />
+              </div>
+              <h4 class="name">ez</h4>
+              <p class="position">售后</p>
+              <ul class="social-links">
+                <li>
+                  <a href=""><i class="fab fa-weixin"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-weibo"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-qq"></i></a>
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="footer-menus">
+          <div class="contact-us">
+            <p class="menu-title">联系我们</p>
+            <p>地址：中国福建省福州市闽侯县闽江学院</p>
+            <p>电话：15605963241</p>
+            <p>传真：15605963241</p>
+            <p>电子邮箱：970793365@qq.com</p>
+          </div>
+          <div class="service-menu footer-menu">
+            <p class="menu-title">服务概览</p>
+            <ul class="menu-items">
+              <li><a href="#">直接购买</a></li>
+              <li><a href="#">急速快递</a></li>
+              <li><a href="#">售后服务</a></li>
+            </ul>
+          </div>
+          <div class="service-menu footer-menu">
+            <p class="menu-title">外设产品</p>
+            <ul class="menu-items">
+              <li><a href="#">桌面网站</a></li>
+              <li><a href="#">移动网站</a></li>
+              <li><a href="#">软件App</a></li>
+            </ul>
+          </div>
+          <div class="service-menu footer-menu">
+            <p class="menu-title">公司动态</p>
+            <ul class="menu-items">
+              <li><a href="#">信息公开</a></li>
+              <li><a href="#">最近新闻</a></li>
+              <li><a href="https://blog.cloudhao.top" target="_blank">最新博客</a></li>
+            </ul>
+          </div>
+          <div class="service-menu footer-menu">
+            <p class="menu-title">帮助与支持</p>
+            <ul class="menu-items">
+              <li><a href="#">帮助中心</a></li>
+              <li><a href="#">联系客服</a></li>
+              <li><a href="#">文档资源</a></li>
+            </ul>
+          </div>
+          <div class="scrollToTop">
+            <a href="#home"><i class="fas fa-chevron-up"></i></a>
+          </div>
+        </div>
+      </footer>
+      <div colspan="2" class="copyright" style="float: left;">
+        <p>闽ICP备18027236号</p>
+        <p>外设天下&nbsp;&copy;&nbsp;版权所有</p>
+    </div>
+    </div>
+    <script src="./libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="./libs/anime/anime.min.js"></script>
+    <script src="./libs/glide/glide.min.js"></script>
+    <script src="./libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
