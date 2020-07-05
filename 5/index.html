@@ -120,7 +120,7 @@
             <button class="filter-btn active" data-filter="*">全部</button>
             <button class="filter-btn" data-filter=".sb">鼠标</button>
             <button class="filter-btn" data-filter=".jp">键盘</button>
-            <button class="filter-btn" data-filter=".ej   ">耳机</button>
+            <button class="filter-btn" data-filter=".ej">耳机</button>
             <button class="filter-btn" data-filter=".shoub">手柄</button>
             <button class="filter-btn" data-filter=".qt">其他</button>
           </div>
@@ -382,6 +382,15 @@
         <p>外设天下&nbsp;&copy;&nbsp;版权所有</p>
     </div>
     </div>
+    <script type="text/javascript">
+			$('.middle_movie_ground').click(function () {
+				var el = $(this).children()[1];
+				var categroy = "外设产品";
+				var action = "查看";
+				var label = el.innerText;
+				_czc.push(["_trackEvent",categroy,action,label,1]);
+			})
+		</script>
     <script src="./libs/isotope/isotope.pkgd.min.js"></script>
     <script src="./libs/anime/anime.min.js"></script>
     <script src="./libs/glide/glide.min.js"></script>
