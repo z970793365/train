@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./libs/glide/glide.core.min.css" />
     <link rel="stylesheet" href="./libs/glide/glide.theme.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <title>动态-外设天下</title>
+    <title>外设天下</title>
   </head>
   <body>
     <div id="app">
@@ -32,49 +32,32 @@
           <div class="burger-line3"></div>
         </div>
       </header>
+
       <div class="content-wrapper">
-        <section id="company-activities" class="company-activities">
-          <h2 class="title1">公司动态</h2>
-          <p class="intro">关注公司动态，第一时间获取一手消息</p>
-          <div class="activities">
-            <div
-              class="activity"
-              v-for="(article,index) in articleList"
-              :key="index"
-            >
-              <div class="act-image-wrapper">
-                <img
-                  :src="'https://mjuruankai.com'+article.fields.cover_image"
-                  alt=""
-                />
+        <section class="company-activities-det">
+          <div class="activities-det">
+            <div class="activity-det">
+              <div class="act-image-wrapper-det">
+                <img :src="'https://mjuruankai.com'+article.cover_image" alt="" />
               </div>
-              <div class="meta">
-                <p class="data-published">
+              <h2 class="act-title-det">{{article.title}}</h2>
+              <div class="meta-det">
+                <p class="data-published-det">
                   <i class="far fa-calendar"></i>
                   {{
-                    new Date(article.fields.date_created).getFullYear() +
+                    new Date(article.date_created).getFullYear() +
                       "-" +
-                      (new Date(article.fields.date_created).getMonth() + 1) +
+                      (new Date(article.date_created).getMonth() + 1) +
                       "-" +
-                      new Date(article.fields.date_created).getDate()
+                      new Date(article.date_created).getDate()
                   }}
                 </p>
-                <p class="comments">
-                  <i class="far fa-comments"></i> {{article.fields.like}}条评论
-                </p>
+                <p class="comments-det"><i class="far fa-comments"></i> 33条评论</p>
               </div>
-              <h2 class="act-title">{{article.fields.title}}</h2>
-              <article>
-                {{ replace(article.fields.content.slice(0, 42)) + "..." }}
+              <article v-html="article.content">
               </article>
-              <button class="readmore-btn" @click="read(article.pk)">
-                阅读更多
-              </button>
             </div>
           </div>
-          <button class="readmore-btn" @click="more()">
-            阅读更多
-          </button>
         </section>
       </div>
       <footer>
@@ -118,49 +101,42 @@
             </ul>
           </div>
           <div class="scrollToTop">
-            <a href="#app"><i class="fas fa-chevron-up"></i></a>
+            <a href="#home"><i class="fas fa-chevron-up"></i></a>
           </div>
-      </footer>
-            </div>          <div colspan="2" class="copyright" style="float: left;">
-            <p>闽ICP备18027236号</p>
-            <p>外设天下&nbsp;&copy;&nbsp;版权所有</p>
         </div>
+      </footer>
     </div>
     <script>
       new Vue({
-        el: "#app",
-        data() {
-          return {
-            articleList: [],
-            num:1,
-          };
-        },
-        created() {
-          this.getArticleList();
-        },
-        methods: {
-          async getArticleList() {
-            const res = await axios.get(
-              `https://mjuruankai.com/api/web/article_list/?page=${this.num}`
-            );
-            this.articleList = [...this.articleList,...res.data.list];
-          },
-          replace(str) {
-            let con = str.replace(/\s*/g, ""); //去掉空格
-            let res = con.replace(/<[^>]+>/g, ""); //去掉所有的html标记
-            let res1 = res.replace(/↵/g, ""); //去掉所有的↵符号
-            let res2 = res1.replace(/[\r\n]/g, ""); //去掉回车换行
-            return res2;
-          },
-          read(id){
-            window.location.href=`./news-detail.html?id=${id}`
-          },
-          more(){
-            this.num++;
-            this.getArticleList()
+        el:'#app',
+        data(){
+          return{
+            article:""
           }
         },
-      });
+        created(){
+          this.getArticle()
+        },
+        methods:{
+          async getArticle(){
+            const id = this.getQueryVariable('id')
+            const res =await axios.get(`https://mjuruankai.com/api/web/article_by_id/?id=${id}`);
+            this.article = res.data.list[0].fields
+            this.article.content = this.article.content.replace(/\/images/g,"https://mjuruankai.com/images/")
+          },
+          getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+              var pair = vars[i].split("=");
+              if (pair[0] == variable) {
+                return pair[1];
+              }
+            }
+            return false;
+          }
+        }
+      })
     </script>
     <script src="./libs/isotope/isotope.pkgd.min.js"></script>
     <script src="./libs/anime/anime.min.js"></script>
